@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "open-cine",
+  "description": "Open Cine: agent-directed video editing and generation.",
+  "owner": { "name": "tranlamm", "url": "https://github.com/tranlamm" },
+  "plugins": [
+    {
+      "name": "open-cine",
+      "source": "./",
+      "description": "Skills and MCP engine for short-form edits, generated films and character swaps.",
+      "category": "media",
+      "tags": ["video", "film", "editing", "generation", "mcp"]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+torchvision==0.28.0
+diffusers @ git+https://github.com/huggingface/diffusers.git@e0abab83b5df05de9e7abd788643c1a7c1e42e28
+transformers @ git+https://github.com/huggingface/transformers.git@07338b6c74a578868368e6e549dea83414e4b8cb
+accelerate==1.15.0
+safetensors==0.8.0
+pillow==12.3.0
+huggingface-hub==1.33.0

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "open-cine",
+  "displayName": "Open Cine",
+  "version": "0.1.0",
+  "description": "Agent-directed video: cut shorts from footage, generate films from a prompt, swap characters in a clip. Skills + the opencine MCP engine on your own Hugging Face ZeroGPU Spaces.",
+  "author": { "name": "tranlamm", "url": "https://github.com/tranlamm" },
+  "homepage": "https://github.com/tranlamm/open-cine",
+  "repository": "https://github.com/tranlamm/open-cine",
+  "license": "Apache-2.0",
+  "keywords": ["video", "editing", "film", "generation", "mcp", "huggingface", "zerogpu"],
+  "mcpServers": {
+    "opencine": {
+      "command": "uv",
+      "args": ["--directory", "${CLAUDE_PLUGIN_ROOT}", "run", "--quiet", "opencine", "mcp", "serve"],
+      "env": {
+        "HF_TOKEN": "${user_config.hf_token}",
+        "UV_PROJECT_ENVIRONMENT": "${CLAUDE_PLUGIN_DATA}/venv",
+        "PYTHONUTF8": "1"
+      }
+    }
+  },
+  "userConfig": {
+    "hf_token": {
+      "type": "string",
+      "title": "Hugging Face token",
+      "description": "A write token of a Hugging Face PRO account (huggingface.co/settings/tokens). Generation runs on private ZeroGPU Spaces in this account.",
+      "sensitive": true
+    }
+  }
+}
